@@ -1,0 +1,14 @@
+.Toastify__toast{
+    width:50% !important;
+    float:right !important;
+}
+
+.form-check{
+    display: inline-block !important;
+}
+
+#worldDiv{
+    background-image: url('../../asset/icon/world.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
