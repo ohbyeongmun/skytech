@@ -1,6 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import { CFormCheck } from '@coreui/react';
-import { type1, groupIcon, groupIcon2 } from '../export';
+import { groupIcon, groupIcon2, basic, plaza, arch, dome, twin,
+    can } from '../export';
 import { OrderDetail } from '../index';
 import './Order.css';
 import { ToastContainer, toast } from 'react-toastify';
@@ -153,29 +154,29 @@ const Order = () => {
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="직선형" style={{ display: 'inline-block' }} />
-                        <img src={type1} alt="" />
+                        <img src={basic} alt="" style={{width:'100%', height:'100%'}}/>
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="프라자형" style={{ display: 'inline-block' }} />
-                        <img src={type1} alt="" />
+                        <img src={plaza} alt="" style={{width:'100%', height:'100%', objectFit:'cover'}}/>
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="아치형" style={{ display: 'inline-block' }} />
-                        <img src={type1} alt="" />
+                        <img src={arch} alt="" style={{width:'100%', height:'100%'}}/>
                     </div>
                 </div>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="돔형(반원)" style={{ display: 'inline-block' }} />
-                        <img src={type1} alt="" />
+                        <img src={dome} alt="" style={{width:'100%', height:'100%'}}/>
                     </div>
                     <div style={{ display: 'inline-block', width: '33%', fontSize: '0.6rem' }}>
                         <CFormCheck id="flexCheckDefault" label="트윈형(아치양개)" style={{ display: 'inline-block' }} />
-                        <img src={type1} alt="" />
+                        <img src={twin} alt="" style={{width:'100%', height:'100%'}}/>
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="캔틸레버형" style={{ display: 'inline-block' }} />
-                        <img src={type1} alt="" />
+                        <img src={can} alt="" style={{width:'100%', height:'100%'}}/>
                     </div>
                 </div>
             </div><br/>
