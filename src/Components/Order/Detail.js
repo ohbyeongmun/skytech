@@ -1,10 +1,74 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { CFormCheck, CButton } from '@coreui/react';
 import { useHistory } from "react-router-dom";
+import { init } from 'emailjs-com';
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import { injectStyle } from "react-toastify/dist/inject-style";
 
 const Detail = () => {
 
     const history = useHistory();
+
+    const [status, setStatus] = useState('success');
+
+    // Toast 메세지 함수
+    useEffect(() => {
+        console.log(status);
+        switch (status) {
+            case 'success':
+                toast("Success!!", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+                return setStatus();
+            case 'pending':
+                toast("Pending!!", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+                return setStatus();
+            case 'fail':
+                toast("Fail!!", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+                return setStatus();
+        }
+    }, [status]);
+
+    const sendEmail = () => {
+        emailjs.init('user_FCN7Gu15TzKBOJxBMf7Ai');
+        let templateParams = {
+            info: '오병문',
+            phone: '01049678337',
+            email: 'dhqudans1234@naver.com',
+            message: '발주합니다.',
+        }
+        console.log(templateParams);
+        emailjs.send('service_bjrh581', 'template_8esyell', templateParams).then(function (response) {
+            console.log('Success!', response.status, response.text);
+            setStatus('success');
+        }, function (error) {
+            console.log('Failed...', error);
+            setStatus('fail');
+        });
+    }
 
     return (
         <div style={{ width: '100%', backgroundColor: '#EAEAEA' }}>
@@ -147,7 +211,7 @@ const Detail = () => {
                             >이전화면</button>
                         </div>
                         <div style={{ display: "inline-block", width: '50%' }}>
-                            <button style={{ backgroundColor: '#3669CF', color: '#fff', fontWeight: 'bold', border: 'none', borderRadius: 5, padding: '10px' }}>견적내용 제출</button>
+                            <button onClick={sendEmail} style={{ backgroundColor: '#3669CF', color: '#fff', fontWeight: 'bold', border: 'none', borderRadius: 5, padding: '10px' }}>견적내용 제출</button>
                         </div><br/><br/>
                     </div>
                 </div>
