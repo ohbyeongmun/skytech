@@ -1,62 +1,16 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CFormCheck } from '@coreui/react';
-import { groupIcon, groupIcon2, basic, plaza, arch, dome, twin,
-    can } from '../export';
-import { OrderDetail } from '../index';
+import {
+    groupIcon, groupIcon2, basic, plaza, arch, dome, twin,
+    can
+} from '../export';
+import { OrderDetail, Footer } from '../index';
 import './Order.css';
-import { ToastContainer, toast } from 'react-toastify';
-import { injectStyle } from "react-toastify/dist/inject-style";
 import { useHistory } from "react-router-dom";
-
-if (typeof window !== "undefined") {
-    injectStyle();
-}
 
 const Order = () => {
 
     const history = useHistory();
-
-    const [status, setStatus] = useState('success');
-
-    // Toast 메세지 함수
-    useEffect(() => {
-        console.log(status);
-        switch (status) {
-            case 'success':
-                toast("Success!!", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
-                return setStatus();
-            case 'pending':
-                toast("Pending!!", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
-                return setStatus();
-            case 'fail':
-                toast("Fail!!", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
-                return setStatus();
-        }
-    }, [status]);
 
     return (
         <div style={{ width: '100%', backgroundColor: '#EDEDED' }}>
@@ -154,43 +108,43 @@ const Order = () => {
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="직선형" style={{ display: 'inline-block' }} />
-                        <img src={basic} alt="" style={{width:'100%', height:'100%'}}/>
+                        <img src={basic} alt="" style={{ width: '100%', height: '100%' }} />
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="프라자형" style={{ display: 'inline-block' }} />
-                        <img src={plaza} alt="" style={{width:'100%', height:'100%', objectFit:'cover'}}/>
+                        <img src={plaza} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="아치형" style={{ display: 'inline-block' }} />
-                        <img src={arch} alt="" style={{width:'100%', height:'100%'}}/>
+                        <img src={arch} alt="" style={{ width: '100%', height: '100%' }} />
                     </div>
                 </div>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="돔형(반원)" style={{ display: 'inline-block' }} />
-                        <img src={dome} alt="" style={{width:'100%', height:'100%'}}/>
+                        <img src={dome} alt="" style={{ width: '100%', height: '100%' }} />
                     </div>
                     <div style={{ display: 'inline-block', width: '33%', fontSize: '0.6rem' }}>
                         <CFormCheck id="flexCheckDefault" label="트윈형(아치양개)" style={{ display: 'inline-block' }} />
-                        <img src={twin} alt="" style={{width:'100%', height:'100%'}}/>
+                        <img src={twin} alt="" style={{ width: '100%', height: '100%' }} />
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
                         <CFormCheck id="flexCheckDefault" label="캔틸레버형" style={{ display: 'inline-block' }} />
-                        <img src={can} alt="" style={{width:'100%', height:'100%'}}/>
+                        <img src={can} alt="" style={{ width: '100%', height: '100%' }} />
                     </div>
                 </div>
-            </div><br/>
-            <OrderDetail /><br/>
+            </div><br />
+            <OrderDetail /><br />
             <div style={{ width: '90%', margin: '0 auto', textAlign: 'center', marginTop: '3%' }}>
                 <div style={{ width: '50%', display: 'inline-block' }}>
                     <button style={{ backgroundColor: '#3669CF', color: '#fff', fontWeight: 'bold', border: 'none', borderRadius: 5, padding: '10px' }}>임시저장</button>
                 </div>
                 <div style={{ width: '50%', display: 'inline-block' }}>
                     <button style={{ backgroundColor: '#3669CF', color: '#fff', fontWeight: 'bold', border: 'none', borderRadius: 5, padding: '10px' }}
-                    onClick={() => history.push('/details')}>다음</button>
+                        onClick={() => history.push('/details')}>다음</button>
                 </div>
-            </div><br/>
-            <ToastContainer />
+            </div><br />
+            <Footer />
         </div>
     )
 }

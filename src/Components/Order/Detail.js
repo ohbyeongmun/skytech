@@ -1,56 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { CFormCheck, CButton } from '@coreui/react';
 import { useHistory } from "react-router-dom";
 import { init } from 'emailjs-com';
 import emailjs from 'emailjs-com';
-import { ToastContainer, toast } from 'react-toastify';
-import { injectStyle } from "react-toastify/dist/inject-style";
+import { Footer } from '../index';
 
 const Detail = () => {
 
     const history = useHistory();
-
-    const [status, setStatus] = useState('success');
-
-    // Toast 메세지 함수
-    useEffect(() => {
-        console.log(status);
-        switch (status) {
-            case 'success':
-                toast("Success!!", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
-                return setStatus();
-            case 'pending':
-                toast("Pending!!", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
-                return setStatus();
-            case 'fail':
-                toast("Fail!!", {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                });
-                return setStatus();
-        }
-    }, [status]);
 
     const sendEmail = () => {
         emailjs.init('user_FCN7Gu15TzKBOJxBMf7Ai');
@@ -63,17 +20,15 @@ const Detail = () => {
         console.log(templateParams);
         emailjs.send('service_bjrh581', 'template_8esyell', templateParams).then(function (response) {
             console.log('Success!', response.status, response.text);
-            setStatus('success');
         }, function (error) {
             console.log('Failed...', error);
-            setStatus('fail');
         });
     }
 
     return (
         <div style={{ width: '100%', backgroundColor: '#EAEAEA' }}>
-            <div style={{ width: '90%', margin: '0 auto' }}><br/>
-                <span style={{fontWeight:'bold'}}>※기둥 발주하는 경우, 아래칸 작성은 <span style={{color:'red'}}>필수</span> 입니다.</span><br /><br />
+            <div style={{ width: '90%', margin: '0 auto' }}><br />
+                <span style={{ fontWeight: 'bold' }}>※기둥 발주하는 경우, 아래칸 작성은 <span style={{ color: 'red' }}>필수</span> 입니다.</span><br /><br />
                 <div style={{ width: '100%' }}>
                     <table id="worldDiv" style={{ width: '100%', margin: '0 auto', border: '1px solid #fff', padding: '10px', fontSize: '0.9rem', borderRadius: 10 }}>
                         <thead>
@@ -202,20 +157,21 @@ const Detail = () => {
                         <div style={{ width: '80%', margin: '0 auto' }}>
                             <span>기타 참고사항</span><br />
                             <textarea placeholder="참고내용을 작성해주세요." style={{ width: '100%', height: '100px' }} />
-                        </div><br/>
+                        </div><br />
                     </div><br />
                     <div style={{ textAlign: 'center' }}>
                         <div style={{ display: "inline-block", width: '50%' }}>
                             <button style={{ backgroundColor: '#3669CF', color: '#fff', fontWeight: 'bold', border: 'none', borderRadius: 5, padding: '10px' }}
-                            onClick={() => history.push('/Order')}
+                                onClick={() => history.push('/Order')}
                             >이전화면</button>
                         </div>
                         <div style={{ display: "inline-block", width: '50%' }}>
                             <button onClick={sendEmail} style={{ backgroundColor: '#3669CF', color: '#fff', fontWeight: 'bold', border: 'none', borderRadius: 5, padding: '10px' }}>견적내용 제출</button>
-                        </div><br/><br/>
+                        </div><br /><br />
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

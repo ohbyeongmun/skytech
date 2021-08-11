@@ -44,12 +44,12 @@ const Login = () => {
     }, []);
 
     useEffect(() => {
-        // if (sessionStorage.getItem('naver_name') !== null) {
-        //     history.push('/Order');
-        // }
-        if (sessionStorage.getItem('naver_name') === null) {
+        if (sessionStorage.getItem('naver_name') !== null) {
             history.push('/Order');
         }
+        // if (sessionStorage.getItem('naver_name') === null) {
+        //     history.push('/Order');
+        // }
     }, []);
 
     return (

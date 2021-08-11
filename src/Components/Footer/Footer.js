@@ -1,25 +1,49 @@
+import React from 'react'
+import { history, home, setting, trade, wallet } from '../export';
+import { Nav } from 'react-bootstrap';
+import './Footer.css';
+const Footer = () => {
+    return (
+        <div id="Foot">
+            <table id="FooterMenu">
+                <thead>
+                    <tr>
+                        <th className="thMenu">
+                            <button style={{ border: 'none', background: 'transparent', padding: '0' }} >
+                                <img src={history} alt="" id="history" />
+                                <span id="MenuText">History</span>
+                            </button>
+                        </th>
+                        <th className="thMenu">
+                            <Nav.Link href="/Wallet" id="LinkTag">
+                                <img src={wallet} alt="" id="Wallet" />
+                                <span id="MenuText">Wallet</span>
+                            </Nav.Link>
+                        </th>
+                        <th className="thMenu">
+                            <Nav.Link href="/HOME" id="LinkTag">
+                                <img src={home} alt="" id="HOME" />
+                                <span id="MenuText">Home</span>
+                            </Nav.Link>
+                        </th>
 
-// import React from 'react'
-// import '../Header/fixed.css';
-// import { Forma, kakao, Mimage, Shape, twit } from '../Auction/export';
+                        <th className="thMenu">
+                            <Nav.Link href="/BTC" id="LinkTag">
+                                <img src={trade} alt="" id="BTC" />
+                                <span id="MenuText">Trade</span>
+                            </Nav.Link>
+                        </th>
+                        <th className="thMenu">
+                            <Nav.Link href="/Setting" id="LinkTag">
+                                <img src={setting} alt="" id="Setting" />
+                                <span id="MenuText">Setting</span>
+                            </Nav.Link>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    )
+}
 
-// const Footer = () => {
-//     return (
-//         <div id="FooterMain">
-//             <div id="FooterDiv" style={{ display: 'inline-block', width: '50%', paddingLeft:20 }}>
-//                 <span id="FootText">PENTASQUARE</span><br />
-//                 <span id="FootText">Copyright 2021 Pentasquare.io</span><br />
-//                 <span id="FootText">All Rights Reserved.</span>
-//             </div>
-//             <div style={{ display: 'inline-block', width: '50%', textAlign: 'right', paddingRight:20 }}>
-//                 <img src={Forma} hspace="20" id="FootImg" alt=""/>
-//                 <img src={kakao} hspace="20" id="FootImg" alt=""/>
-//                 <img src={Mimage} hspace="20" id="FootImg" alt=""/>
-//                 <img src={Shape} hspace="20" id="FootImg" alt=""/>
-//                 <img src={twit} hspace="20" id="FootImg" alt=""/>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Footer
+export default Footer
