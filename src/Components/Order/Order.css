@@ -12,3 +12,20 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#TopMenu{
+    background-image: url('../../asset/icon/world.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(237, 237, 237) !important;
+    border: none !important;
+}
+
+#DownMenu{
+    background-image: url('../../asset/icon/world.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(237, 237, 237) !important;
+    border: none !important;
+    padding: 10px;
+}

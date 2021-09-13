@@ -25,7 +25,7 @@ const Order = () => {
                 <span>본사 사정에 의해 조정될 수 있습니다.</span><br />
                 <span>기본10일 소요, 밴딩시/돌출8M 이상시 <span style={{ fontWeight: 'bold' }}>14일↑</span> 소요</span>
             </div><br />
-            <div style={{ padding: '10px', width: '90%', backgroundColor: '#fff', fontWeight: 'bold', border: '2px solid #fff', margin: '0 auto', boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)', borderRadius: 5, fontSize: '0.8rem' }}>
+            <div id="TopMenu" style={{ padding: '10px', width: '90%', backgroundColor: '#fff', fontWeight: 'bold', border: '2px solid #fff', margin: '0 auto', boxShadow: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)', borderRadius: 5, fontSize: '0.8rem' }}>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
                     <div style={{ width: '30%', display: 'inline-block' }}>
                         <span>현장명</span>
@@ -107,30 +107,42 @@ const Order = () => {
                 </div><br />
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ display: 'inline-block', width: '33%' }}>
-                        <CFormCheck id="flexCheckDefault" label="직선형" style={{ display: 'inline-block' }} />
-                        <img src={basic} alt="" style={{ width: '100%', height: '100%' }} />
+                        <div style={{ width: '90%', margin: '0 auto' }}>
+                            <CFormCheck id="flexCheckDefault" label="직선형" style={{ display: 'inline-block' }} />
+                            <img src={basic} alt="" style={{ width: '100%', height: '100%' }} />
+                        </div>
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
-                        <CFormCheck id="flexCheckDefault" label="프라자형" style={{ display: 'inline-block' }} />
-                        <img src={plaza} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <div style={{ width: '90%', margin: '0 auto' }}>
+                            <CFormCheck id="flexCheckDefault" label="프라자형" style={{ display: 'inline-block' }} />
+                            <img src={plaza} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        </div>
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
-                        <CFormCheck id="flexCheckDefault" label="아치형" style={{ display: 'inline-block' }} />
-                        <img src={arch} alt="" style={{ width: '100%', height: '100%' }} />
+                        <div style={{ width: '90%', margin: '0 auto' }}>
+                            <CFormCheck id="flexCheckDefault" label="아치형" style={{ display: 'inline-block' }} />
+                            <img src={arch} alt="" style={{ width: '100%', height: '100%' }} />
+                        </div>
                     </div>
                 </div>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center', fontSize: '0.8rem', display: 'flex', alignItems: 'center' }}>
                     <div style={{ display: 'inline-block', width: '33%' }}>
-                        <CFormCheck id="flexCheckDefault" label="돔형(반원)" style={{ display: 'inline-block' }} />
-                        <img src={dome} alt="" style={{ width: '100%', height: '100%' }} />
+                        <div style={{ width: '90%', margin: '0 auto' }}>
+                            <CFormCheck id="flexCheckDefault" label="돔형(반원)" style={{ display: 'inline-block' }} />
+                            <img src={dome} alt="" style={{ width: '100%', height: '100%' }} />
+                        </div>
                     </div>
                     <div style={{ display: 'inline-block', width: '33%', fontSize: '0.6rem' }}>
-                        <CFormCheck id="flexCheckDefault" label="트윈형(아치양개)" style={{ display: 'inline-block' }} />
-                        <img src={twin} alt="" style={{ width: '100%', height: '100%' }} />
+                        <div style={{ width: '90%', margin: '0 auto' }}>
+                            <CFormCheck id="flexCheckDefault" label="트윈형(아치양개)" style={{ display: 'inline-block' }} />
+                            <img src={twin} alt="" style={{ width: '100%', height: '100%' }} />
+                        </div>
                     </div>
                     <div style={{ display: 'inline-block', width: '33%' }}>
-                        <CFormCheck id="flexCheckDefault" label="캔틸레버형" style={{ display: 'inline-block' }} />
-                        <img src={can} alt="" style={{ width: '100%', height: '100%' }} />
+                        <div style={{ width: '90%', margin: '0 auto' }}>
+                            <CFormCheck id="flexCheckDefault" label="캔틸레버형" style={{ display: 'inline-block' }} />
+                            <img src={can} alt="" style={{ width: '100%', height: '100%' }} />
+                        </div>
                     </div>
                 </div>
             </div><br />
