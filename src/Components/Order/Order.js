@@ -12,6 +12,23 @@ const Order = () => {
 
     const history = useHistory();
 
+    const MovePage = () => {
+        let siteName = document.getElementById('siteName').value;
+        let buyer = document.getElementById('buyer').value;
+        let destination = document.getElementById('destination').value;
+        let phone = document.getElementById('phone').value;
+        let receipt = document.getElementById('receipt').value;
+        let construction = document.getElementById('construction').value;
+
+        if (siteName !== '' && buyer !== '' && destination !== '' && phone !== ''
+            && receipt !== '' && construction !== '') {
+            history.push('/details');
+        }
+        else {
+            alert('빈 공간 빠짐없이 입력하세요.');
+        }
+    }
+
     return (
         <div style={{ width: '100%', backgroundColor: '#EDEDED' }}>
             <div style={{ width: '90%', margin: '0 auto', padding: '10px' }}>
@@ -31,7 +48,7 @@ const Order = () => {
                         <span>현장명</span>
                     </div>
                     <div style={{ width: '70%', display: 'inline-block' }}>
-                        <input type="text" style={{ width: '80%' }} placeholder="SKY TECH" />
+                        <input id="siteName" type="text" style={{ width: '80%' }} placeholder="SKY TECH" />
                     </div>
                 </div>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
@@ -39,7 +56,7 @@ const Order = () => {
                         <span>발주처</span>
                     </div>
                     <div style={{ width: '70%', display: 'inline-block' }}>
-                        <input type="text" style={{ width: '80%' }} placeholder="NAVER" />
+                        <input id="buyer" type="text" style={{ width: '80%' }} placeholder="NAVER" />
                     </div>
                 </div>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center', display: 'flex', alignItems: 'center' }}>
@@ -70,7 +87,7 @@ const Order = () => {
                         <span>수신지 주소</span>
                     </div>
                     <div style={{ width: '70%', display: 'inline-block' }}>
-                        <input type="text" style={{ width: '80%' }} placeholder="서울시 구로구 고척1동 165-12" />
+                        <input id="destination" type="text" style={{ width: '80%' }} placeholder="서울시 구로구 고척1동 165-12" />
                     </div>
                 </div>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
@@ -78,7 +95,7 @@ const Order = () => {
                         <span>연락처</span>
                     </div>
                     <div style={{ width: '70%', display: 'inline-block' }}>
-                        <input type="text" style={{ width: '80%' }} />
+                        <input id="phone" type="text" style={{ width: '80%' }} />
                     </div>
                 </div>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
@@ -86,7 +103,7 @@ const Order = () => {
                         <span>희망수신일</span>
                     </div>
                     <div style={{ width: '70%', display: 'inline-block' }}>
-                        <input type="text" style={{ width: '80%' }} />
+                        <input id="receipt" type="text" style={{ width: '80%' }} />
                     </div>
                 </div>
                 <div style={{ width: '90%', margin: '0 auto', textAlign: 'center' }}>
@@ -94,7 +111,7 @@ const Order = () => {
                         <span>공사예정일</span>
                     </div>
                     <div style={{ width: '70%', display: 'inline-block' }}>
-                        <input type="text" style={{ width: '80%' }} />
+                        <input id="construction" type="text" style={{ width: '80%' }} />
                     </div>
                 </div>
             </div><br />
@@ -153,7 +170,7 @@ const Order = () => {
                 </div>
                 <div style={{ width: '50%', display: 'inline-block' }}>
                     <button style={{ backgroundColor: '#3669CF', color: '#fff', fontWeight: 'bold', border: 'none', borderRadius: 5, padding: '10px' }}
-                        onClick={() => history.push('/details')}>다음</button>
+                        onClick={MovePage}>다음</button>
                 </div>
             </div><br />
             <Footer />

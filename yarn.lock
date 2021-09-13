@@ -1184,15 +1184,15 @@
     "exec-sh" "^0.3.2"
     "minimist" "^1.2.0"
 
-"@coreui/coreui@^4.0.0":
+"@coreui/coreui@^4.0.1", "@coreui/coreui@4.0.1":
   "integrity" "sha512-1mrWnbqoWb7+8ZAMUdlWt0AqVzDEkJglk7F3OaFsQtxienezFvlMNsd1YPPNo+taRzF7HZ8xSDIAItCvlOaMVg=="
   "resolved" "https://registry.npmjs.org/@coreui/coreui/-/coreui-4.0.1.tgz"
   "version" "4.0.1"
 
-"@coreui/react@^4.0.0-beta.3":
-  "integrity" "sha512-LXtQao2S0iKxfur26GCzuHmQ6VwXCW6RS1TWYT9BV8twRU3HvuRsrmAaEYgqtAyW3QsPGZprDO545+FCNTDeUw=="
-  "resolved" "https://registry.npmjs.org/@coreui/react/-/react-4.0.0-beta.3.tgz"
-  "version" "4.0.0-beta.3"
+"@coreui/react@4.0.0-rc.0":
+  "integrity" "sha512-vJ8MqBChFfxtYqmvFzcxwNU+98LniLlGmaIrY7Xa7Ckr29ZRh1d4aBJhM1gGtE2kefsra4B8hzw/6rzEXYdLlQ=="
+  "resolved" "https://registry.npmjs.org/@coreui/react/-/react-4.0.0-rc.0.tgz"
+  "version" "4.0.0-rc.0"
 
 "@csstools/convert-colors@^1.4.0":
   "integrity" "sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw=="
@@ -9370,7 +9370,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
-"react-router-dom@^5.2.0", "react-router-dom@5.2.0":
+"react-router-dom@5.2.0":
   "integrity" "sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA=="
   "resolved" "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.2.0.tgz"
   "version" "5.2.0"
